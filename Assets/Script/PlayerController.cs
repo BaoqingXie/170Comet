@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     //public float speed;
     public float move_speed;
-    private bool facing_right = true;
+    private bool facing_right = false;
     private float move_x;
 
     public float jumpforce;

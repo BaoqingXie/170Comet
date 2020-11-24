@@ -86,6 +86,7 @@ public class snowball : MonoBehaviour
     {
     	GameObject SnowballIns = Instantiate(Snowball, hold_pos.position, hold_pos.rotation);
     	SnowballIns.GetComponent<Rigidbody2D>().velocity = hold_pos.right * LaunchForce;
+		Debug.Log(hold_pos.right);
     }
 
     void faceMouse()
