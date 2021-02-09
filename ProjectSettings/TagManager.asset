@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - palette
+  - trigger
+  - paper
+  - pen
+  - Timeline
+  - RhythmGame
+  - Activator
+  - SadFace
+  - EndingLine
+  - Flower
   layers:
   - Default
   - TransparentFX
@@ -40,4 +50,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: front
+    uniqueID: 3440197665
+    locked: 0
+  - name: most front
+    uniqueID: 4077316625
     locked: 0

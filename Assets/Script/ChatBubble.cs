@@ -13,7 +13,7 @@ public class ChatBubble : MonoBehaviour
     }
 
     private void Start(){
-            iconSpriteRenderer.enabled = false;
+        iconSpriteRenderer.enabled = false;
             backgroundSpriteRenderer.enabled = false;
     }
 

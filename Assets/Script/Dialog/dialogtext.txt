@@ -1,0 +1,40 @@
+Level1 Start
+Nightingale: Can you hear people cheering outside? They’re saying:”Comet, Comet!”
+Girl: “Comet?” I’ve only heard of it through books. It said it’s the most beautiful star in the world...
+Nightingale: Can you see it through the window? What does a “comet” look like?
+Girl: The sky was blocked by trees. I could only see a few light. 
+Girl: It’s okay! I’ve heard about it in books, let me draw it for you! Could you bring me a pen and a paper?
+---
+Level1 End
+Nightingale: Wow!
+GIRL: The book says it’s a star with a trailing tail, but I don’t know if I drew it right.
+Nightingale: Never mind, I’ll go get some evidences to see what it looks like!
+---
+Villager
+Bearded Man: That’s it, those amazing stars dragged their long tails and traveled cross the sky.
+Boy with Green Hair: Those stars brings happiness. We are so lucky!
+Bearded Man: I’ve heard that if we could go up to the mountain top and touch them close, we could have a wish come true!
+---
+Villager1
+Cowboy: Big news! The king is dead.
+---
+Villager2
+Bearded Man: It’s over! Everything is over! The war is coming! My life is over...
+---
+Villager3
+QAQ
+---
+Lv2P1StandUp
+Bearded Man: What a beautiful song! What a cute little bird! Thank you little beauty, now I feel much better.
+Bearded Man: If you don’t mind, you can take this flower. Flowers are rare in winter!
+---
+Lv2P2Room
+Nightingale: It was a shining comet that flew over last night.
+Girl: How can I see the comet?
+Nightingale: I don't know... But I'll find out for you!
+---
+Lv2P2Flower
+Nightingale: Here is a present for you! It was a shining comet that flew over last night.
+Girl: How can I see the comet?
+Nightingale: I don't know... But I'll find out for you!
+---
