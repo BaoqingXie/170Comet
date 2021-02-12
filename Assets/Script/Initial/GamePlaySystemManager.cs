@@ -36,7 +36,7 @@ public class GamePlaySystemManager : MonoBehaviour
     	}
         //完成以后需要删除↑
 
-        if (SceneManager.GetActiveScene().name != "Level1") {
+        if (SceneManager.GetActiveScene().name != "Level1" && SceneManager.GetActiveScene().name != "Level2SummerRoom") {
             if (!isLevel1Mission1End) {
         	   GameObject.Find("Player").GetComponent<PaletteController>().enabled = false;
             } 
