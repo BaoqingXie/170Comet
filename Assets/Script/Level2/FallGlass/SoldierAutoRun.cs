@@ -84,6 +84,9 @@ public class SoldierAutoRun : MonoBehaviour
 			Soldier01Anim.SetBool("isWalking",true);
 	        Soldier02Anim.SetBool("isWalking",true);
 			this.transform.position = Vector2.MoveTowards(this.transform.position, GameObject.Find("Player").GetComponent<Transform>().position, speed * Time.deltaTime);
+			if (Vector2.Distance(this.transform.position, GameObject.Find("Player").GetComponent<Transform>().position) < 0.1f) {
+				CaptainAction.isSoldierTrace = false;
+			}
 		}
 		// 静止
 		else {

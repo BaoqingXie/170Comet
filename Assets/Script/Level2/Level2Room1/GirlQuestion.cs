@@ -40,17 +40,9 @@ public class GirlQuestion : MonoBehaviour
 		if (isDiaActive && GameObject.Find("DialogBox") == null) {
 			//SceneManager.LoadScene("Level2SummerRoom"); // 夏天：按空格call scene3 in SceneTransition
 			//黑屏
-			StartCoroutine(LoadLevel());
+			LevelLoader.instance.LoadLevel("Level2SummerRoom");
 			
 		}
-	}
-
-	IEnumerator LoadLevel()
-	{
-		Crossfade.transform.Find("Image").gameObject.SetActive(true);
-		Crossfade.GetComponent<Animator>().enabled = true;
-		yield return new WaitForSeconds(1f);
-		SceneManager.LoadScene("Level2SummerRoom");
 	}
 
 	void OnTriggerStay2D(Collider2D collision) {

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GirlOutMovement : MonoBehaviour
 {
-    private GameObject Crossfade;
     private Rigidbody2D rb;
     private float moveH, moveV;
     private Vector2 direction;
@@ -27,7 +26,6 @@ public class GirlOutMovement : MonoBehaviour
 
     private void Awake()
     {
-        Crossfade = GameObject.Find("Crossfade");
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         GirlAnimator = GetComponent<Animator>();
@@ -113,19 +111,10 @@ public class GirlOutMovement : MonoBehaviour
 
         if(Isindoor && Input.GetKeyDown("space")){
             LevelLoader.instance.LoadLevel("Level4Part2");
-            //StartCoroutine(LoadLevel());//进入Level4Part2
         }
         
 
     }
-
- //    IEnumerator LoadLevel()
-	// {
-	// 	Crossfade.GetComponent<Animator>().SetTrigger("Start");
-	// 	yield return new WaitForSeconds(1f);
- //        //进入Level4Part2
-	// 	SceneManager.LoadScene("Level4Part2");
-	// }
 
         void OnTriggerEnter2D(Collider2D collision)
     {

@@ -11,7 +11,7 @@ public class CaptainAction : MonoBehaviour
 	public GameObject windowGlass;
 	public GameObject questionMark;
 	public GameObject hint;
-	public GameObject fading;
+	public GameObject failUI;
 	public GameObject player;
 	float whistleTime = 3f;
 	float knockableTime = 1f;
@@ -44,7 +44,7 @@ public class CaptainAction : MonoBehaviour
     	sucCount = 0;
     	failCount = 0;
     	glass.SetActive(false);
-    	fading.SetActive(false);
+    	failUI.SetActive(false);
     	questionMark.SetActive(false);
     	hint.SetActive(false);
     	audioSources = this.gameObject.GetComponents<AudioSource>();
@@ -131,10 +131,15 @@ public class CaptainAction : MonoBehaviour
         	isSoldierRun = false;
         	isSoldierTrace = true;
         	// Debug.Log("游戏失败");
-        	GameManager.instance.StorePlayerLoc(new Vector2(25f,-1.5f));     
-        	LevelLoader.instance.LoadLevel("Level2FallLose");
+        	GameManager.instance.StorePlayerLoc(new Vector2(25f,-1.5f));
+        	Invoke("FailScreen",1f);
+        	failCount ++;
         }
-
+        else if (failCount > 2){
+        	if (hint.activeSelf && Input.GetKeyDown(KeyCode.Space)) {
+        		LevelLoader.instance.LoadLevel("Level2FallLose");
+        	}
+        }
         if (sucCount == 5){
         	audioSources[2].PlayOneShot(glassSound,0.5f);
         	Debug.Log("游戏成功");
@@ -143,6 +148,14 @@ public class CaptainAction : MonoBehaviour
         	GameManager.instance.GlassEnd();
         	sucCount++;
         }
+    }
+
+    void FailScreen() {
+    	failUI.SetActive(true);     
+    	Invoke("EndHint",0.7f);
+    }
+	void EndHint() {
+    	hint.SetActive(true);
     }
 
     void StartWhistle() {

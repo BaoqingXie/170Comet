@@ -21,11 +21,17 @@ public class SoldierMovement : MonoBehaviour
     private Animator GreenAnimator;
     private Animator BlackAnimator;
     public GameObject Hat;
+    private bool isEnd = false;
+
+    public GameObject hint;
+    public GameObject failUI;
 
     private void Start(){
         SoldierAnimator = GetComponent<Animator>();
         GreenAnimator = GameObject.Find("GreenNpC").GetComponent<Animator>();
         BlackAnimator = GameObject.Find("BrownNpc").GetComponent<Animator>();
+        hint.SetActive(false);
+        failUI.SetActive(false);
     }
 
 
@@ -54,7 +60,16 @@ public class SoldierMovement : MonoBehaviour
         if(girlInfo.rigidbody == true && !girl.GetComponent<GirlOutMovement>().isHiding){
             if(girlInfo.rigidbody.name == "PlayerGirl"){
                 Debug.Log("Game over");
-                LevelLoader.instance.LoadLevel("Level4");
+                GameManager.instance.stopMoving = true;
+                if (!isEnd) {
+                    failUI.SetActive(true);     
+                    Invoke("EndHint",1f);
+                    isEnd = true;
+                } else {
+                    if (hint.activeSelf && Input.GetKeyDown(KeyCode.Space)) {
+                        LevelLoader.instance.LoadLevel("Level4");
+                    }
+                }
             }
         }
         
@@ -75,6 +90,10 @@ public class SoldierMovement : MonoBehaviour
                 ismoving = true;
             }
         }
+    }
+
+    void EndHint() {
+        hint.SetActive(true);
     }
 
     void stop(){

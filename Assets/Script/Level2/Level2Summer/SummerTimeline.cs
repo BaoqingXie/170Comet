@@ -42,6 +42,12 @@ public class SummerTimeline : MonoBehaviour
         if(NpcTwoTimeline.GetComponent<PlayableDirector>().enabled == false) {
             if (!TimelineGameManager.isTimeline) {
                 player.GetComponent<BirdOutDoorMovement>().enabled = true;
+                npc01.SetActive(false);
+                npc02.SetActive(false);
+                greenSoldier.GetComponent<Transform>().position = new Vector2(22.2f, greenSoldier.GetComponent<Transform>().position.y);
+                redSoldier.GetComponent<Transform>().position = new Vector2(27.2f, redSoldier.GetComponent<Transform>().position.y);
+                redSoldier.SetActive(true);
+                greenSoldier.SetActive(true);
                 LevelLoader.instance.LoadLevel("Level2Summer");
 	        }
 	    }
